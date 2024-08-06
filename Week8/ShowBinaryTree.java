@@ -1,7 +1,9 @@
 public class ShowBinaryTree {
     private static String getSpace(int n) {
         String s = "";
-        for (int i = 0; i < n; i++) s += " ";
+        for (int i = 0; i < n; i++)
+            s += " ";
+
         return s;
     }
 
@@ -10,11 +12,14 @@ public class ShowBinaryTree {
     }
 
     public static String prettyPrint(int n, BinaryTreeNode node) {
-        if (node == null) return getSpace(n) + "null\n";
+        if (node == null)
+            return getSpace(n) + "null\n";
+        
         String s = "";
-        s += prettyPrint(n+2, node.right);
+        s += prettyPrint(n + 2, node.right);
         s += getSpace(n) + node.label + "\n";
-        s += prettyPrint(n+2, node.left);
+        s += prettyPrint(n + 2, node.left);
+
         return s;
     }
 

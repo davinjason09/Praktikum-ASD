@@ -1,5 +1,5 @@
-import java.util.Scanner;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class TwoStack {
     public static void main(String[] args) throws IOException {
@@ -22,7 +22,8 @@ public class TwoStack {
 
             switch (numChoice) {
                 case 1:
-                    if (twoStack.isFull()) System.out.println("Stack is full!");
+                    if (twoStack.isFull())
+                        System.out.println("Stack is full!");
                     else {
                         System.out.print("Enter number: ");
                         stackNum = in.nextInt();
@@ -31,14 +32,16 @@ public class TwoStack {
                     }
                     break;
                 case 2:
-                    if (twoStack.isEmpty()) System.out.println("Stack is empty!");
+                    if (twoStack.isEmpty())
+                        System.out.println("Stack is empty!");
                     else {
                         numTemp = twoStack.popA();
-                        System.out.println((numTemp == -1)? "Stack A is empty!" : "Popped number = " + numTemp);
+                        System.out.println((numTemp == -1) ? "Stack A is empty!" : "Popped number = " + numTemp);
                     }
                     break;
                 case 3:
-                    if (twoStack.isFull()) System.out.println("Stack is full!");
+                    if (twoStack.isFull())
+                        System.out.println("Stack is full!");
                     else {
                         System.out.print("Enter number: ");
                         stackNum = in.nextInt();
@@ -47,10 +50,11 @@ public class TwoStack {
                     }
                     break;
                 case 4:
-                    if (twoStack.isEmpty()) System.out.println("Stack is empty!");
+                    if (twoStack.isEmpty())
+                        System.out.println("Stack is empty!");
                     else {
                         numTemp = twoStack.popB();
-                        System.out.println((numTemp == -1)? "Stack B is empty!" : "Popped number = " + numTemp);
+                        System.out.println((numTemp == -1) ? "Stack B is empty!" : "Popped number = " + numTemp);
                     }
                     break;
                 case 5:

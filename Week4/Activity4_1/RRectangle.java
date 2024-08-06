@@ -3,11 +3,11 @@ public class RRectangle {
     double height;
 
     public void getArea() {
-        System.out.println("Area : " + this.width*this.height);
+        System.out.println("Area : " + this.width * this.height);
     }
 
     public boolean isLargerThan(RRectangle b) {
-        return (this.width*this.height) > (b.width*b.height);
+        return (this.width * this.height) > (b.width * b.height);
     }
 
     RRectangle(double width, double height) {

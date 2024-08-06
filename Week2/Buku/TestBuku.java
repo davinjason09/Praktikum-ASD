@@ -1,17 +1,17 @@
 public class TestBuku {
     public static void main(String[] args) {
         Buku[] book = new Buku[3];
-        
+
         book[0] = new Buku();
         book[0].judul = "Introduction to Java Programming and Data Structures";
         book[0].penulis = "Daniel Liang";
         book[0].harga = 355000;
-        
+
         book[1] = new Buku();
         book[1].judul = "Advanced Java Programming";
         book[1].penulis = "Uttam Roy";
         book[1].harga = 236250;
-        
+
         book[2] = new Buku();
         book[2].judul = "Practical Java Programming";
         book[2].penulis = "Perry Xiao";

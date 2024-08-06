@@ -1,32 +1,40 @@
 public class TraverseBinaryTree {
     public static boolean printLevel(BinaryTreeNode t, int level) {
-        if (t == null) return false;
+        if (t == null)
+            return false;
+
         if (level == 0) {
             System.out.printf("Visited node %s%n", t.label);
             return true;
         }
 
-        boolean left = printLevel(t.left, level-1);
-        boolean right = printLevel(t.right, level-1);
+        boolean left = printLevel(t.left, level - 1);
+        boolean right = printLevel(t.right, level - 1);
         return left || right;
     }
 
     public static void traversePreorder(BinaryTreeNode t) {
-        if (t == null) return;
+        if (t == null)
+            return;
+
         System.out.printf("Visited node %s%n", t.label);
         traversePreorder(t.left);
         traversePreorder(t.right);
     }
 
     public static void traverseInorder(BinaryTreeNode t) {
-        if (t == null) return;
+        if (t == null)
+            return;
+
         traverseInorder(t.left);
         System.out.printf("Visited node %s%n", t.label);
         traverseInorder(t.right);
     }
 
     public static void traversePostorder(BinaryTreeNode t) {
-        if (t == null) return;
+        if (t == null)
+            return;
+            
         traversePostorder(t.left);
         traversePostorder(t.right);
         System.out.printf("Visited node %s%n", t.label);
@@ -45,8 +53,7 @@ public class TraverseBinaryTree {
         p = new BinaryTreeNode("c", null, null);
         p = new BinaryTreeNode("b", p, null);
         q = new BinaryTreeNode("d", null, null);
-        tree = new BinaryTreeNode("a", p, q); 
-        
+        tree = new BinaryTreeNode("a", p, q);
 
         System.out.println(tree);
 

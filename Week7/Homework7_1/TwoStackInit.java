@@ -17,7 +17,9 @@ public class TwoStackInit {
     }
 
     public int popA() {
-        if (nItemsA == 0) return -1;
+        if (nItemsA == 0)
+            return -1;
+
         return stackArray[--nItemsA];
     }
 
@@ -26,7 +28,9 @@ public class TwoStackInit {
     }
 
     public int popB() {
-        if (nItemsB == 0) return -1;
+        if (nItemsB == 0)
+            return -1;
+            
         return stackArray[maxSize - --nItemsB - 1];
     }
 

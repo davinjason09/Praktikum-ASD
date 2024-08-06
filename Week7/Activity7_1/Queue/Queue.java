@@ -20,7 +20,8 @@ public class Queue {
 
             switch (numChoice) {
                 case 1:
-                    if (theQueue.isFull()) System.out.println("Queue is full");
+                    if (theQueue.isFull())
+                        System.out.println("Queue is full");
                     else {
                         System.out.print("Enter number: ");
                         numTemp = in.nextInt();
@@ -29,7 +30,8 @@ public class Queue {
                     }
                     break;
                 case 2:
-                    if (theQueue.isEmpty()) System.out.println("Queue is empty");
+                    if (theQueue.isEmpty())
+                        System.out.println("Queue is empty");
                     else {
                         numTemp = theQueue.dequeue();
                         System.out.println("Dequeued number: " + numTemp);

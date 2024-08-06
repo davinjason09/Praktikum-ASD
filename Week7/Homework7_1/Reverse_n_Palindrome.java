@@ -4,9 +4,11 @@ public class Reverse_n_Palindrome {
     public static String reverse(String s) {
         String reverse = "";
         Stack<Character> stack = new Stack<Character>();
-        for (int i = 0; i < s.length(); i++) stack.push(s.charAt(i));
-        
-        while (!stack.isEmpty()) reverse += stack.pop();
+        for (int i = 0; i < s.length(); i++)
+            stack.push(s.charAt(i));
+
+        while (!stack.isEmpty())
+            reverse += stack.pop();
 
         return reverse;
     }
@@ -15,7 +17,7 @@ public class Reverse_n_Palindrome {
         String reverse = reverse(s);
         return s == reverse;
     }
-    
+
     public static void main(String[] args) {
         String s1 = "REVELATION";
         String s2 = "TACOCAT";

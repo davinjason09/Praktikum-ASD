@@ -1,7 +1,7 @@
 public class Cube extends Rectangle {
     double depth;
     double z0;
-    
+
     Cube(double width, double height, double depth) {
         super(width, height);
         this.depth = depth;
@@ -31,7 +31,7 @@ public class Cube extends Rectangle {
 
     public boolean isIntersectingWith(Cube c) {
         boolean overlapZ = (this.z0 + this.depth >= c.z0) && (c.z0 + c.depth >= this.z0);
-        
+
         return super.isIntersectingWith(c) && overlapZ;
     }
 }

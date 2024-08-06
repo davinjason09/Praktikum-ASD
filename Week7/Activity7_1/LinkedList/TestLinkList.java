@@ -5,14 +5,14 @@ public class TestLinkList {
         LinkListInit theList1 = new LinkListInit();
         LinkListInit theList2 = new LinkListInit();
 
-        //Define the list size
+        // Define the list size
         Scanner in = new Scanner(System.in);
         int nodeNum1, nodeNum2, tempNum;
 
         System.out.print("First list size? ");
         nodeNum1 = in.nextInt();
 
-        //Initializing and displaying the list
+        // Initializing and displaying the list
         for (int i = 0; i < nodeNum1; i++) {
             System.out.print("Insert number : ");
             tempNum = in.nextInt();
@@ -32,7 +32,7 @@ public class TestLinkList {
 
         in.close();
 
-        //Deleting elements of the list
+        // Deleting elements of the list
         System.out.println("\nDeleting the first node of the first list");
         theList1.deleteFirst();
         theList1.displayLink();

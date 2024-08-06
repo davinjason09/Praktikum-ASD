@@ -10,19 +10,22 @@ public class Homework_3_2 {
     public static Student getYoungestStudent(Student[] students) {
         int index = 0;
         for (int i = 0; i < students.length; i++) {
-            if (students[i].age < students[index].age) index = i;
+            if (students[i].age < students[index].age)
+                index = i;
         }
+
         return students[index];
     }
 
     public static double getRectangleArea(Rectangle2 r) {
-        return r.width*r.height;
+        return r.width * r.height;
     }
 
     public static Rectangle2 getSquare(double d) {
         Rectangle2 r = new Rectangle2();
         r.width = d;
         r.height = d;
+        
         return r;
     }
 
@@ -41,10 +44,13 @@ public class Homework_3_2 {
 
         Student students[] = new Student[4];
         students[0] = a;
+        
         students[1] = b;
+
         students[2] = new Student();
         students[2].name = "Jack";
         students[2].age = 13;
+
         students[3] = new Student();
         students[3].name = "Lewis";
         students[3].age = 16;
@@ -62,10 +68,10 @@ public class Homework_3_2 {
         r.height = 3.5;
         r.width = 5;
 
-        System.out.println("\nRectangle =\nWidth  : " +  + r.width + "\nHeight : " + r.height);
+        System.out.println("\nRectangle =\nWidth  : " + +r.width + "\nHeight : " + r.height);
         System.out.println("The area of the rectangle is " + getRectangleArea(r));
 
         Rectangle2 square = getSquare(4.0);
-        System.out.println("\nSquare =\nWidth  : " +  + square.width + "\nHeight : " + square.height);
+        System.out.println("\nSquare =\nWidth  : " + +square.width + "\nHeight : " + square.height);
     }
 }

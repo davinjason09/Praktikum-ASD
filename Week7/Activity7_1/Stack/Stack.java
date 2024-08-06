@@ -1,5 +1,5 @@
-import java.util.Scanner;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Stack {
     public static void main(String[] args) throws IOException {
@@ -18,9 +18,10 @@ public class Stack {
             stackNum = in.nextInt();
             theStack.push(stackNum);
         }
+        
         theStack.printStack();
 
-        in.close(); 
+        in.close();
 
         while (!theStack.isEmpty()) {
             double value = theStack.pop();

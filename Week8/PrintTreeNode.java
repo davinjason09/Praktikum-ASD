@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PrintTreeNode {
     static List<List<String>> lines;
@@ -8,35 +9,36 @@ public class PrintTreeNode {
             System.out.print(centerString(width, ""));
             return false;
         }
-        
+
         String line;
-        int gap = width/4;
-        
+        int gap = width / 4;
+
         if (t.left != null && t.right != null) {
-            line = String.format("┌%s┴%s┐", "─".repeat(gap-1), "─".repeat(gap-1));
+            line = String.format("┌%s┴%s┐", "─".repeat(gap - 1), "─".repeat(gap - 1));
         } else if (t.left != null) {
-            line = String.format("┌%s┘%s", "─".repeat(gap-1), " ".repeat(gap));
+            line = String.format("┌%s┘%s", "─".repeat(gap - 1), " ".repeat(gap));
         } else if (t.right != null) {
-            line = String.format("%s└%s┐", " ".repeat(gap), "─".repeat(gap-1));
+            line = String.format("%s└%s┐", " ".repeat(gap), "─".repeat(gap - 1));
         } else {
             line = "";
         }
-        
+
         List<String> labeledLine = new ArrayList<>();
         labeledLine.add(t.label);
         labeledLine.add(line);
-        if (!lines.contains(labeledLine)) lines.add(labeledLine);
-        
+        if (!lines.contains(labeledLine))
+            lines.add(labeledLine);
+
         if (level == 1) {
             System.out.print(centerString(width, t.label));
             return true;
         }
-        
+
         boolean left = printLevel(t.left, level - 1, width / 2);
         boolean right = printLevel(t.right, level - 1, width / 2);
         return left || right;
     }
-    
+
     public static void print(BinaryTreeNode t, int level, int maxLetterWidth) {
         int startLevel = 1;
         int startidx = 0;
@@ -63,7 +65,7 @@ public class PrintTreeNode {
         int rightPadding = padding - leftPadding;
 
         return String.format("%s%s%s", " ".repeat(leftPadding), s, " ".repeat(rightPadding));
-    }  
+    }
 
     public static void main(String[] args) {
         BinaryTreeNode tree, p, q, r;

@@ -3,7 +3,7 @@ public class Rectangle {
     double height;
     double x0;
     double y0;
-    
+
     Rectangle(double width, double length) {
         this.width = width;
         height = length;
@@ -19,7 +19,7 @@ public class Rectangle {
     }
 
     public double getArea() {
-        return width*height;
+        return width * height;
     }
 
     public boolean isLargerThan(Rectangle r) {
@@ -29,7 +29,7 @@ public class Rectangle {
     public boolean isIntersectingWith(Rectangle r) {
         boolean overlapX = (this.x0 + this.width >= r.x0) && (r.x0 + r.width >= this.x0);
         boolean overlapY = (this.y0 + this.height >= r.y0) && (r.y0 + r.height >= this.y0);
-        
+
         return overlapX && overlapY;
     }
 }

@@ -13,7 +13,7 @@ public class TestCube {
         b.x0 = 3;
         b.y0 = 0;
         b.z0 = -1;
-        
+
         b.printInfo();
         System.out.println("Surface area of Cube b = " + b.getArea());
         System.out.println("Volume of Cube b = " + b.getVolume() + "\n");

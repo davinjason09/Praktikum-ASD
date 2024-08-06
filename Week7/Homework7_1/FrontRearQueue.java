@@ -20,7 +20,8 @@ public class FrontRearQueue {
 
             switch (numChoice) {
                 case 1:
-                    if (theQueue.isFull()) System.out.println("Queue is full");
+                    if (theQueue.isFull())
+                        System.out.println("Queue is full");
                     else {
                         System.out.print("Enter number: ");
                         numTemp = in.nextInt();
@@ -29,14 +30,16 @@ public class FrontRearQueue {
                     }
                     break;
                 case 2:
-                    if (theQueue.isEmpty()) System.out.println("Queue is empty");
+                    if (theQueue.isEmpty())
+                        System.out.println("Queue is empty");
                     else {
                         numTemp = theQueue.dequeueFront();
                         System.out.println("Dequeued number: " + numTemp);
                     }
                     break;
                 case 3:
-                    if (theQueue.isEmpty()) System.out.println("Queue is empty");
+                    if (theQueue.isEmpty())
+                        System.out.println("Queue is empty");
                     else {
                         numTemp = theQueue.dequeueRear();
                         System.out.println("Dequeued number: " + numTemp);

@@ -19,6 +19,7 @@ public class QueueInit {
         if (rear == maxSize - 1) {
             rear = -1;
         }
+        
         queueArray[++rear] = j;
         nItems++;
     }
@@ -28,6 +29,7 @@ public class QueueInit {
         if (front == maxSize) {
             front = 0;
         }
+
         nItems--;
         return temp;
     }

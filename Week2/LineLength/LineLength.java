@@ -12,7 +12,7 @@ public class LineLength {
         double d;
         double deltaX = line.p1.x - line.p0.x;
         double deltaY = line.p1.y - line.p0.y;
-        d = Math.sqrt(deltaX*deltaX + deltaY*deltaY);
+        d = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
         System.out.println("The length of the line is " + d);
     }
 }

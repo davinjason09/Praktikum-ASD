@@ -16,15 +16,17 @@ public class FrontRearQueueInit {
     }
 
     public void enqueue(int j) {
-        if (rear == maxSize - 1) rear = -1;
-        
+        if (rear == maxSize - 1)
+            rear = -1;
+
         queueArray[++rear] = j;
         nItems++;
     }
 
     public int dequeueFront() {
         int temp = queueArray[front++];
-        if (front == maxSize) front = 0;
+        if (front == maxSize)
+            front = 0;
 
         nItems--;
         return temp;
@@ -32,8 +34,9 @@ public class FrontRearQueueInit {
 
     public int dequeueRear() {
         int temp = queueArray[rear--];
-        if (rear == -1) rear = maxSize - 1;
-        
+        if (rear == -1)
+            rear = maxSize - 1;
+
         nItems--;
         return temp;
     }
